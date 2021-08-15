@@ -9,12 +9,13 @@ class App extends Component {
       isDarkMode: false,
       items: itemData,
     };
+    this.handleDarkModeClick = this.handleDarkModeClick.bind(this);
+  }
+
+  handleDarkModeClick() {
+    this.setState({ isDarkMode: !this.state.isDarkMode });
   }
   render() {
-    // handleDarkModeClick() {
-
-    // }
-
     return (
       <div className={"App " + (this.state.isDarkMode ? "dark" : "light")}>
         <header>
